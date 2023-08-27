@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- =========================================tailwind css================================== -->
+    <link rel="stylesheet" href="./css/tailwind.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allison&family=Outfit&display=swap" rel="stylesheet">
+    <!-- ============================================external css============================== -->
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      .scroll-images::-webkit-scrollbar {
+        -webkit-appearance: none;
+      }
+
+      .scroll-image::-webkit-scrollbar {
+        -webkit-appearance: none;
+      }
+      .img-box {
+        background: url(./assets/images/after1\ 1.png);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        transition: 0.9s;
+      }
+      .img-box:nth-child(2) {
+        background: url(./assets/images/before1\ 1.png);
+        background-size: cover;
+        background-position: center;
+      }
+      .img-box:hover {
+        width: 1400px;
+        cursor: pointer;
+      }
+
+      
+      /* =================Animation code =====================*/
+      .child-container {
+        width: calc(250px * 9);
+        animation: scroll 40s linear infinite;
+      }
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-250px * 9));
+        }
+      }
+      body{
+        font-family: 'Outfit';
+      }
+    </style>
+    <title>Home Section</title>
+  </head>
+
+  <body
+    class="scrollbar-none bg-bg relative h-screen w-screen overflow-x-hidden overflow-y-hidden">
+    <main
+      class="main-div overflow-y-scroll h-full w-full       
+      ">
+      <!-- vsm:bg-red-950 sm:bg-yellow-800 md:bg-blue-800 lg:bg-orange-400 xl:bg-lime-700 2xl:bg-slate-700 -->
+      <!-- ===========================================hero section start========================= -->
+      <header class="bg-[url('/assets/images/bc.jpg')] bg-cover md:pb-1 rounded-b-[2.5rem] overflow-hidden"
+      >
+        <nav class="flex justify-between h-24">
+          <div class="py-5 pl-10 2xl:pl-40">
+            <img
+              class="md:w-56 vsm:w-40 aspect-auto 2xl:w-80"
+              src="./assets/logo/Logo1 1.png "
+              alt=""
+            />
+          </div>
+          <ul
+            id="navbar"
+            class="hidden text-[#aab0bd] md:flex md:py-5 lg:px-10 md:px-5 lg:text-2xl md:text-xl lg:mr-5 2xl:text-3xl 2xl:pr-40"
+          >
+            <li class="m group flex flex-col items-center justify-start vsm:mr-8 2xl:mr-12">
+              <a class="hover:text-prime" href="./testing.html"> testing </a>
+              <div
+                class="h-[0.4rem] w-[0.4rem] rounded-full bg-prime mt-2 shadow-[0px_0px_10px_rgba(225,255,255,0.5)] hidden group-hover:block"
+              ></div>
+            </li>
+            <li class="group flex flex-col items-center justify-start  vsm:mx-8 2xl:mx-12">
+              <a class="hover:text-prime" href="./product.html"> Products </a>
+              <div
+                class="h-[0.4rem] w-[0.4rem] rounded-full bg-prime mt-2 shadow-[0px_0px_10px_rgba(225,255,255,0.5)] hidden group-hover:block"
+              ></div>
+            </li>
+            <li class="group flex flex-col items-center justify-start  vsm:mx-8 2xl:mx-12">
+              <a class="hover:text-prime" href="/service.html"> Services </a>
+              <div
+                class="h-[0.4rem] w-[0.4rem] rounded-full bg-prime mt-2 shadow-[0px_0px_10px_rgba(225,255,255,0.5)] hidden group-hover:block"
+              ></div>
+            </li>
+            <li class="group flex flex-col items-center justify-start vsm:ml-8 2xl:ml-12">
+              <a class="hover:text-prime" href="./contact.html"> Contacts </a>
+              <div
+                class="h-[0.4rem] w-[0.4rem] rounded-full bg-prime mt-2 shadow-[0px_0px_10px_rgba(225,255,255,0.5)] hidden group-hover:block"
+              ></div>
+            </li>
+          </ul>
+          <button
+            id="nav-button"
+            class="bg-white w-6 h-6 z-30 flex justify-center items-center hover-link text-white vsm:text-black text-3xl my-[1.7rem] mx-5 md:hidden"
+          >
+            <ion-icon name="reorder-four-outline"></ion-icon>
+          </button>
+
+          <ul
+            id="nav-menu"
+            class="pl-5 bg-white justify-start text-xl z-20 absolute top-0 -left-full flex-col w-[60%] h-screen items-start flex"
+          >
+            <div class="flex w-full border-b-4 border-slate-200">
+              <li class=" ">
+                <img
+                  class="w-56 aspect-auto my-10"
+                  src="./assets/logo/Logo1 1.png "
+                  alt=""
+                />
+              </li>
+              <li id="close-button" class="text-4xl mt-2">
+                <ion-icon name="close-outline"></ion-icon>
+              </li>
+            </div>
+            <li class="w-full mt-2 border-b-2 border-slate-200">
+              <a  href="/about.html">About</a>
+            </li>
+            <li class="w-full mt-2 border-b-2 border-slate-200">
+              <a href="/product.html">Products</a>
+            </li>
+            <li class="w-full mt-2 border-b-2 border-slate-200">
+              <a href="/service.html">Services</a>
+            </li>
+            <li class="w-full mt-2 border-b-2 border-slate-200">
+              <a href="/contact.html">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="md:flex-row vsm:flex-col sm:flex mt-10 lg:mt-20 vsm:mx-10 2xl:mx-40 2xl:mt-40">
+          <div class="w-[50%] md:w-[50%] vsm:w-full">
+            <p
+              class="text-white vsm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[5.25rem]  vsm:w-full md:leading-[3.5rem] 2xl:leading-[6.5rem] font-bold md:text-start"
+            >
+              Grow Your Skills to Advance Your Carrier Path
+            </p>
+          </div>
+          <div class="w-[50%] md:w-[50%] vsm:w-full lg:ml-32 vsm:mt-4 md:mt-0">
+            <div class="flex-col vsm:mt-2 2xl:mt-10">
+              <p
+                class="text-[#aab0bd] text-xl vsm:text-xl md:text-xl sm:text-sm md:ml-4 2xl:text-3xl 2xl:leading-[3rem] "
+              >
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Officia eius quisquam iusto enim necessitatibus a, voluptate
+                Lorem ipsum dolor sit amet, consectetur
+              </p>
+
+              <div class="flex pt-6 2xl:pt-12">
+                <button
+                  class="text-white bg-blue-600 hover:bg-prime rounded-full font-bold vsm:text-lg vsm:px-5 vsm:py-2 md:text-[0.900rem] md:px-14 md:py-1 lg:text-xl lg:px-10 lg:py-4 2xl:py-8 2xl:px-12 2xl:text-3xl"
+                >
+                  Enquire Now
+                </button>
+                <a
+                  href=""
+                  class="text-white md:text-xl vsm:lg ml-8 hover:underline pt-5 2xl:pt-10 2xl:text-4xl"
+                  >Contact Sales</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:flex md:w-full vsm:w-full px-10 2xl:px-40 vsm:my-10 lg:my-20">
+          <div class="md:w-1/3 flex-col lg:mt-10 vsm:order-3 md:order-1">
+            <div class="flex">
+              <div class="text-white lg:pr-20 md:pr-5">
+                <p class="text-4xl font-bold 2xl:text-6xl">1.02k</p>
+                <p class="2xl:text-2xl text-[#aab0bd]">Actively Registered as a Student</p>
+              </div>
+              <div class="text-white lg:pr-20 md:pr-0 vsm:ml-5">
+                <p class="text-4xl font-bold 2xl:text-6xl">766</p>
+                <p class="2xl:text-2xl text-[#aab0bd]">Experienced Teachers</p>
+              </div>
+            </div>
+            <div
+              class="text-[#aab0bd] md:text-[1.4rem] vsm:text-[1.5rem] lg:text-[1.7rem] 2xl:text-[3rem] vsm:mt-12 md:mt-26 lg:mt-36 vsm:mr-1 md:mr-5 vsm:mx-5"
+            >
+              <a class="mr-3" href=""
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+              <a class="mx-3" href=""
+                ><ion-icon name="logo-facebook"></ion-icon
+              ></a>
+              <a class="mx-3" href=""
+                ><ion-icon name="logo-twitter"></ion-icon
+              ></a>
+              <a class="mx-3" href=""
+                ><ion-icon name="logo-whatsapp"></ion-icon
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="md:w-1/3 md:flex vsm:my-5 md:mx-0 md:my-0 vsm:w-full vsm:order-1 md:order-2"
+          >
+            <img
+              class="md:w-full md:h-full rounded-md vsm:w-full w-60"
+              src="./assets/images/img1.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="md:w-1/3 md:flex md:ml-5 vsm:my-5 md:mx-0 md:my-0 vsm:w-full vsm:order-2 md:order-3"
+          >
+            <img
+              class="md:w-full md:h-full rounded-md vsm:w-full w-60"
+              src="./assets/images/img2.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </header>
+      <!-- ===================================================hero section end================================== -->
+      <!-- =====================================================blog section start ===========================-->
+      <section class="py-20 bg-[url('/assets/images/bg6.jpg')] bg-center bg-cover" >
+        <div
+          class="flex flex-wrap lg:mx-10 md:mx-1 mx-4 vsm:justify-center vsm:items-center"
+        >
+          <div class="md:w-96 w-full h-auto border-2 border-grey m-[0.50rem]">
+            <img
+              class="w-full aspect-auto"
+              src="./assets/images/blog.jpg"
+              alt=""
+            />
+            <h1 class="text-2xl font-semibold mx-6 mt-3">
+              Here"s how siri purchase 99% Products and receive
+            </h1>
+            <p class="mx-6 mt-3">New Delhi</p>
+          </div>
+
+          <div class="md:w-96 w-full h-auto border-2 border-grey m-[0.50rem]">
+            <img
+              class="w-full aspect-auto"
+              src="./assets/images/blog.jpg"
+              alt=""
+            />
+            <h1 class="text-2xl font-semibold mx-6 mt-3">
+              Here"s how siri purchase 99% Products and receive
+            </h1>
+            <p class="mx-6 mt-3">New Delhi</p>
+          </div>
+          <div class="md:w-96 w-full h-auto border-2 border-grey m-[0.50rem]">
+            <img
+              class="w-full aspect-auto"
+              src="./assets/images/blog.jpg"
+              alt=""
+            />
+            <h1 class="text-2xl font-semibold mx-6 mt-3">
+              Here"s how siri purchase 99% Products and receive
+            </h1>
+            <p class="mx-6 mt-3">New Delhi</p>
+          </div>
+          <div class="md:w-96 w-full h-auto border-2 border-grey m-[0.50rem]">
+            <img
+              class="w-full aspect-auto"
+              src="./assets/images/blog.jpg"
+              alt=""
+            />
+            <h1 class="text-2xl font-semibold mx-6 mt-3">
+              Here"s how siri purchase 99% Products and receive
+            </h1>
+            <p class="mx-6 mt-3">New Delhi</p>
+          </div>
+          <div class="md:w-96 w-full h-auto border-2 border-grey m-[0.50rem]">
+            <img
+              class="w-full aspect-auto"
+              src="./assets/images/blog.jpg"
+              alt=""
+            />
+            <h1 class="text-2xl font-semibold mx-6 mt-3">
+              Here"s how siri purchase 99% Products and receive
+            </h1>
+            <p class="mx-6 mt-3">New Delhi</p>
+          </div>
+          <div class="md:w-96 w-full h-auto border-2 border-grey m-[0.50rem]">
+            <img
+              class="w-full aspect-auto"
+              src="./assets/images/blog.jpg"
+              alt=""
+            />
+            <h1 class="text-2xl font-semibold mx-6 mt-3">
+              Here"s how siri purchase 99% Products and receive
+            </h1>
+            <p class="mx-6 mt-3">New Delhi</p>
+          </div>
+        </div>
+        <div class="flex justify-center items-center py-10">
+          <button
+            class="text-white bg-blue-600 hover:bg-prime rounded-full font-bold vsm:text-lg vsm:px-5 vsm:py-2 md:text-[0.900rem] md:text-xl md:px-10 md:py-4"
+          >
+            See More..
+          </button>
+        </div>
+      </section>
+      <!-- ===================================================Blog section end ================================-->
+      <!-- ==================================================quote start ======================================-->
+      <div class="bg-[url('/assets/images/bg7.jpg')] bg-cover pb-20">
+      <section class="pb-20">
+        <div class="bg-[url('/assets/images/team.JPG')] bg-blend-darken h-[38rem] w-full bg-cover">
+          <div class="justify-center text-center items-center pt-[18rem]">
+            <h1 class="vsm:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl  text-white font-bold">
+              "Team is an organization that builds entrepreneurs."
+            </h1>
+            <p class="text-white vsm:text-sm sm:text-base md:text-lg lg:text-lg 2xl:text-2xl">
+              By Henri, who was in Team and later co-founded Black Magic.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================================quote end =============================================-->
+      <!-- ===================================================happy customer start===================================-->
+      <section>
+        <h1
+          class="text-2xl ml-10 sm:text-4xl font-light sm:ml-20">
+          1000+ Happy Customers
+        </h1>
+        <div class="main-container grid  h-40 m-auto relative w-[90%] place-items-center overflow-hidden">
+          <div class="child-container flex">
+            <div class="px-5 w-40 aspect-auto bg-center bg-cover">
+              <img
+                class="w-40 h-14"
+                src="./assets/images/maruti-suzuki.png"
+                alt=""
+              />
+            </div>
+
+            <div class="px-5 w-40 h-14 bg-center bg-cover">
+              <img class="w-40 h-14" src="./assets/images/ola.png" alt=""/>
+            </div>
+
+            <div class="px-5 w-40 h-14 bg-center bg-cover">
+              <img
+                class="w-40 h-14"
+                src="./assets/images/whirlpool.png"
+                alt=""
+              />
+            </div>
+
+            <div class="px-5 w-40 h-14 bg-center bg-cover">
+              <img class="w-40 h-14" src="./assets/images/honda.png" alt="" />
+            </div>
+
+            <div class="px-5 w-40 h-14 bg-center bg-cover">
+              <img class="w-40 h-14" src="./assets/images/escorts.png" alt="" />
+            </div>
+
+            <div class="px-5 w-40 h-14 bg-center bg-cover">
+              <img
+                class="w-40 h-14"
+                src="./assets/images/whirlpool.png"
+                alt=""
+              />
+            </div>
+
+            <div class="px-5 w-40 h-14 bg-center bg-cover">
+              <img class="w-40 h-14" src="./assets/images/ola.png" alt="" />
+            </div>
+
+            <div class="px-5 w-40 h-14 bg-center bg-cover">
+              <img class="w-40 h-14" src="./assets/images/honda.png" alt="" />
+            </div>
+
+            <div class="px-5 w-40 h-14 bg-center bg-cover">
+              <img class="w-40 h-14" src="./assets/images/escorts.png" alt="" />
+            </div>
+
+            <div class="px-5 w-40 h-14 bg-center bg-cover">
+              <img
+                class="w-40 h-14"
+                src="./assets/images/whirlpool.png"
+                alt=""
+              />
+            </div>
+
+            <div class="px-5 w-40 h-14 bg-center bg-cover">
+              <img class="w-40 h-14" src="./assets/images/ola.png" alt="" />
+            </div>
+
+            <div class="px-5 w-40 h-14 bg-center bg-cover">
+              <img class="w-40 h-14" src="./assets/images/honda.png" alt="" />
+            </div>
+
+            <div class="px-5 w-40 h-14 bg-center bg-cover">
+              <img class="w-40 h-14" src="./assets/images/escorts.png" alt="" />
+            </div>
+
+            <div class="px-5 w-40 h-14 bg-center bg-cover">
+              <img
+                class="w-40 h-14"
+                src="./assets/images/whirlpool.png"
+                alt=""
+              />
+            </div>
+
+            <div class="px-5 w-40 h-14 bg-center bg-cover">
+              <img class="w-40 h-14" src="./assets/images/ola.png" alt="" />
+            </div>
+            <div class="px-5 w-40 h-14 bg-center bg-cover">
+              <img
+                class="w-40 h-14"
+                src="./assets/images/maruti-suzuki.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================================happy customer end =========================================-->
+      <!-- ====================================================partner section start==================================== -->
+      <section class="mt-20">
+        <div>
+          <h1
+            class="sm:-mb-[8rem]  vsm:mt-0 flex items-center justify-center font-bold text-stone-200 sm:text-9xl vsm:text-6xl vsm:-mb-[4rem]">
+            PARTNERS
+          </h1>
+          <h1
+            style="font-family: 'Allison', cursive"
+            class="relative flex justify-center items-center sm:text-7xl vsm:text-5xl"
+          >
+            partners
+          </h1>
+          <p
+            class="text-blue-500 flex justify-center items-center text-center mx-96 vsm:mx-10"
+          >
+            United by trust, driven by shared goals, our company and partners
+            form anunbreakable bond, propelling us towards boundless success
+          </p>
+        </div>
+
+        <div
+          class="main-scroll-div mt-10 flex justify-center vsm:w-[100%] w-[65%] sm:px-10 items-center lg:w-[98%]"
+        >
+          <div>
+            <button class=" sm:text-6xl md:text-7xl lg:text-8xl hidden sm:block" onclick="scrolll()">
+              <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+          </div>
+          <div class="w-[90%] justify-center items-center">
+            <div class="scroll-images flex overflow-auto scroll-smooth ">
+              <div
+                class=" vsm:mx-10 lg:mx-5 min-w-[16rem] aspect-auto h-40 bg-white border-8 border-gray-300 hover:border-0 overflow-hidden flex justify-center items-center"
+              >
+                <img class="" src="./assets/images/hp.jpg" alt="" />
+              </div>
+              <div
+                class="vsm:mx-10 lg:mx-5 min-w-[16rem] aspect-auto h-40 bg-white border-8 border-gray-300 hover:border-0 overflow-hidden flex justify-center items-center"
+              >
+                <img class="" src="./assets/images/microsoft.jpg" alt="" />
+              </div>
+              <div
+                class="lg:mx-5 min-w-[16rem] aspect-auto h-40 bg-white border-8 border-gray-300 hover:border-0 overflow-hidden flex justify-center items-center"
+              >
+                <img class="" src="./assets/images/sophos.jpg" alt="" />
+              </div>
+              <div
+                class="lg:mx-5 min-w-[16rem] aspect-auto h-40 bg-white border-8 border-gray-300 hover:border-0 overflow-hidden flex justify-center items-center"
+              >
+                <img class="" src="./assets/images/optima.jpg" alt="" />
+              </div>
+              <div
+                class="lg:mx-5 min-w-[16rem] aspect-auto h-40 bg-white border-8 border-gray-300 hover:border-0 overflow-hidden flex justify-center items-center"
+              >
+                <img class="" src="./assets/images/hp.jpg" alt="" />
+              </div>
+              <div
+                class="lg:mx-5 min-w-[16rem] aspect-auto h-40 bg-white border-8 border-gray-300 hover:border-0 overflow-hidden flex justify-center items-center"
+              >
+                <img class="" src="./assets/images/microsoft.jpg" alt="" />
+              </div>
+              <div
+                class="lg:mx-5 min-w-[16rem] aspect-auto h-40 bg-white border-8 border-gray-300 hover:border-0 overflow-hidden flex justify-center items-center"
+              >
+                <img class="" src="./assets/images/sophos.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <button class="sm:text-6xl md:text-7xl lg:text-8xl hidden sm:block" onclick="scrolllr()">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================================partner section end======================================== -->
+      <!-- ===================================================before after section start ==================================-->
+      <section class="mt-20">
+        <h1
+          class="flex justify-center items-center font-bold sm:text-6xl vsm:text-4xl"
+        >
+          Before and
+          <p class="text-prime ml-4">After</p>
+        </h1>
+
+        <div class="md:flex md:mt-5 md:mr-14 vsm:flex-col md:flex-row">
+          <div class="container flex-col md:w-1/2 vsm:w-full vsm:py-10">
+            <div class="gallery flex ml-14">
+              <div
+                class="img-box w-[21rem] 2xl:w-[55rem] aspect-auto h-52 border-r-4 border-r-prime rounded-ss-xl bg-blue-800">
+              </div>
+              <div class="img-box w-[21rem] 2xl:w-[55rem] h-52 aspect-auto rounded-e-xl bg-blue-500">
+              </div>
+            </div>
+            <div class="flex">
+              <div>
+                <h1
+                  class="vsm:ml-14 lg:mx-14 font-bold sm:text-xl md:text-2xl lg:text-4xl"
+                >
+                  Plumbing Install
+                </h1>
+                <p class="lg:mx-14 vsm:ml-14">
+                  Whether your project is large or small, residential or
+                  commercial we can deliver a quality project on time.
+                </p>
+              </div>
+              <div>
+                <a href="#link">
+                  <ion-icon
+                    class="lg:w-28 lg:h-24 vsm:w-20 vsm:h-10 text-prime"
+                    name="trending-up-outline"
+                  ></ion-icon
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="container flex-col md:w-1/2 vsm:w-full vsm:py-10">
+            <div class="gallery flex ml-14">
+              <div
+                class="img-box w-[21rem] 2xl:w-[55rem] aspect-auto h-52 border-r-4 border-r-prime rounded-ss-xl bg-blue-800" >
+              </div>
+              <div class="img-box w-[21rem] 2xl:w-[55rem] aspect-auto h-52 rounded-e-xl bg-blue-500">
+              </div>
+            </div>
+            <div class="flex">
+              <div>
+                <h1
+                  class="vsm:ml-14 lg:mx-14 font-bold sm:text-xl md:text-2xl lg:text-4xl">
+                  Plumbing Install
+                </h1>
+                <p class="lg:mx-14 vsm:ml-14">
+                  Whether your project is large or small, residential or
+                  commercial we can deliver a quality project on time.
+                </p>
+              </div>
+              <div>
+                <a href="#link">
+                  <ion-icon
+                    class="lg:w-28 lg:h-24 vsm:w-20 vsm:h-10 text-prime"
+                    name="trending-up-outline"
+                  ></ion-icon
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+      <!-- ==================================================before after section end====================================== -->
+      <!-- =====================================================footer section start ========================================================-->
+      <footer
+        class="bg-[url('/assets/images/bc.jpg')] w-full aspect-auto bg-cover rounded-t-[2.5rem] "
+      >
+        <h1
+          class="flex justify-center items-center text-center font-bold text-white vsm:text-3xl vsm:pt-10 vsm:mx-5 md:pt-28 md:text-6xl sm:mx-20 xl:mx-40 lg:mx-20 2xl:mx-52 2xl:text-[6rem] leading-tight"
+        >
+          Register Now to get a Big Discount just for you
+        </h1>
+        <div class="flex justify-center items-center mt-10">
+          <button
+            class="text-white bg-blue-600 hover:bg-prime rounded-full font-bold md:text-xl md:px-9 md:py-3 vsm:px-5 vsm:text-base vsm:py-2"
+          >
+            Join Now
+          </button>
+        </div>
+        <div class="flex justify-between items-center mt-5">
+          <div
+            class="flex flex-col justify-between items-center  w-2/6"
+          >
+            <img
+              class="vsm:w-28 md:w-48 lg:w-56 xl:w-72 2xl:w-80 aspect-auto"
+              src="./assets/logo/Logo1 1.png"
+              alt=""
+            />
+            <h1
+              class="vsm:mt-5 md:mt-10 lg:mt-14 2xl:mt-20 vsm:text-xs vsm:mx-2 sm:text-sm md:text-base lg:text-xl xl:text-xl 2xl:text-2xl text-[#aab0bd]
+              vsm:px-2 sm:px-6 md:px-10  lg:px-20 lg:-ml-[1.5rem] xl:px-32 2xl:px-44"
+                    
+              >
+              We help you to improve your skills
+            </h1>
+          </div>
+          <div class="flex flex-col justify-center items-center w-2/6 vsm:mx-2 mx-10">
+            <h1 class="md:text-5xl vsm:text-3xl font-bold text-white">Info</h1>
+            <p class="text-[#aab0bd] md:text-xl">About</p>
+            <p class="text-[#aab0bd] md:text-xl">Services</p>
+            <p class="text-[#aab0bd] md:text-xl">Products</p>
+            <p class="text-[#aab0bd] md:text-xl">Contacts</p>
+          </div>
+          <div class="w-2/6 vsm:ml-2 ml-10">
+            <h1 class="md:text-5xl vsm:text-3xl font-bold text-white">Links</h1>
+            <p class="text-[#aab0bd] md:text-xl">Blogs</p>
+            <p class="text-[#aab0bd] md:text-xl">Our Customers</p>
+            <p class="text-[#aab0bd] md:text-xl">Partners</p>
+            <p class="text-[#aab0bd] md:text-xl">Before and After</p>
+          </div>
+        </div>
+        <div class="flex vsm:ml-5 lg:ml-24  2xl:ml-40">
+          <div class="w-3/4 font-bold justify-between items-end md:mt-16 text-[#aab0bd]  vsm:mt-16 ">
+            <p>Design by sushmit and Neeraj</p>
+          </div>
+          <div
+            class="w-1/4 justify-between items-end mr-30 text-[#aab0bd] vsm:text-[1rem] sm:text-[1.4rem] lg:text-[1.7rem] lg:mt-16 vsm:mt-16"
+          >
+            <a class="md:mr-3" href=""
+              ><ion-icon name="logo-instagram"></ion-icon
+            ></a>
+            <a class="md:mx-3" href=""
+              ><ion-icon name="logo-facebook"></ion-icon
+            ></a>
+            <a class="md:mx-3" href=""
+              ><ion-icon name="logo-twitter"></ion-icon
+            ></a>
+            <a class="md:mx-3" href=""
+              ><ion-icon name="logo-whatsapp"></ion-icon
+            ></a>
+          </div>
+        </div>
+      </footer>
+      <!-- ====================================================footer section end =============================================-->
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- <script src="./script/script.js"></script> -->
+    <script>
+      function scrolll() {
+        var left = document.querySelector(".scroll-images");
+        left.scrollBy(-1200, 0);
+      }
+      function scrolllr() {
+        var right = document.querySelector(".scroll-images");
+        right.scrollBy(1200, 0);
+      }
+
+      function scrollleft() {
+        var left = document.querySelector(".scroll-image");
+        left.scrollBy(-1200, 0);
+      }
+      function scrolllright() {
+        var right = document.querySelector(".scroll-image");
+        right.scrollBy(1200, 0);
+      }
+    </script>
+    <script src="./script/script.js"></script>
+  </body>
+</html>

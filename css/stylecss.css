@@ -1,0 +1,134 @@
+
+@keyframes square {
+    0%{
+      transform: translate(0,0);
+    }
+    20%{
+      transform: translate3d(-2.6806px, 3px, 0px)
+    }
+    40%{
+      transform: translate3d(2.6806px, 3px, 0px)
+    }
+    60%{
+      transform: translate3d(2.6806px, 0px, 5px)
+    }
+    80%{
+      transform: translate(2px, 0px);
+    }
+    100%{
+      transform: translate(0px, 0px);
+    }
+  }
+  
+  
+  
+  
+  .image-1-testimonials-home {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 100%;
+    position: absolute;
+    top: auto;
+    bottom: 10%;
+    left: auto;
+    right: 19%;
+    box-shadow: -7px -7px #0b5d6a;
+    animation-name: square;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    /* animation-direction: reverse; */
+  }
+  
+  .image-2-testimonials-home {
+   
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 100%;
+    position: absolute;
+    top: auto;
+    bottom: 0%;
+    left: 15%;
+    right: auto;
+    box-shadow: -7px -7px #f4bd14;
+    animation-name: square;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+  }
+  .image-3-testimonials-home {
+   
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 100%;
+    position: absolute;
+    top: 29%;
+    bottom: auto;
+    left: 0%;
+    right: auto;
+    box-shadow: -7px -7px #f4bd14;
+    animation-name: square;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+  }
+  
+  
+  
+  
+  .image-4-testimonials-home {
+  
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 100%;
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: 32%;
+    right: auto;
+    box-shadow: -7px -7px #0b5d6a;
+    animation-name: square;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate-reverse;
+  }
+  
+  
+  
+  .image-5-testimonials-home {
+  
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 100%;
+    position: absolute;
+    top: auto;
+    bottom: 34%;
+    left: 33%;
+    right: auto;
+    box-shadow: -7px -7px #0b5d6a;
+    animation-name: square;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction:reverse;
+   
+  }
+  .image-6-testimonials-home {
+   
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 100%;
+    position: absolute;
+    top: 18%;
+    bottom: auto;
+    left: auto;
+    right: 5%;
+    box-shadow: -7px -7px #f4bd14;
+    animation-name: square;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+  
+  }
